@@ -110,3 +110,25 @@ document.addEventListener('DOMContentLoaded', () => {
     renderListSelector();
     renderTasks();
 });
+function lighting() {
+    const root = document.querySelector(':root');
+    if (document.getElementById('lightmode').checked) {
+        root.style.setProperty("--background-color", "#1d1d1f");
+        root.style.setProperty("--card-background", "#000000");
+        root.style.setProperty("--text-color", "#f7f7f7");
+        root.style.setProperty("--accent-color", "#ffffff");
+        root.style.setProperty("--progress-color", "#f7f7f7");
+        console.log("checked");
+    }
+    else if (!document.getElementById('lightmode').checked) {
+        root.style.setProperty("--background-color", "#f7f7f7");
+        root.style.setProperty("--card-background", "#ffffff");
+        root.style.setProperty("--text-color", "#1d1d1f");
+        root.style.setProperty("--accent-color", "#000000");
+        root.style.setProperty("--progress-color", "#000000");
+    }
+
+}
+
+
+

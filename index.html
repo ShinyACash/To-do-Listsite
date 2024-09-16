@@ -7,27 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="todo-container">
-        <h1>To-Do</h1>
-        <div class="list-header">
-            <select id="list-selector" class="list-selector">
-                <option value="Default">Default List</option>
-            </select>
-            <button id="new-list-btn" class="todo-input btn">New List</button>
+    <header id="headshit">
+        <div class="headertitle">!List</div>
+        <nav>
+            <ul>
+                <li><a href="howto.html">How to use</a></li>
+                <div class="toggle-switch">
+                <label class="switch-label">
+                    <input type="checkbox" class="light" id="lightmode" onclick="lighting()">
+                    <span class="slider"></span>
+                </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="list">
+        <div class="container1">
+            <h2>Hello User!</h2>
+            <p1>Keep going! You're doing great.</p1>
         </div>
-        <input type="text" id="new-list-input" class="new-list-input" placeholder="Enter new list name">
-        <div class="todo-input">
-            <input type="text" id="new-task" placeholder="Add a new task" aria-label="New task">
-            <button id="add-task">Add</button>
+        <div class="todo-container">
+            <h1>To-Do</h1>
+            <div class="list-header">
+                <select id="list-selector" class="list-selector">
+                    <option value="Default">Default List</option>
+                </select>
+                <button id="new-list-btn" class="todo-input btn">New List</button>
+            </div>
+            <input type="text" id="new-list-input" class="new-list-input" placeholder="Enter new list name">
+            <div class="todo-input">
+                <input type="text" id="new-task" placeholder="Add a new task" aria-label="New task">
+                <button id="add-task">Add</button>
+            </div>
+            <ul id="todo-list" class="todo-list">
+            </ul>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
         </div>
-        <ul id="todo-list" class="todo-list">
+        <div class="container2">
 
-        </ul>
-        <div class="progress-bar">
-            <div id="progress" class="progress"></div>
         </div>
     </div>
-
     <script src="codeshit.js"></script>
 </body>
 </html>
