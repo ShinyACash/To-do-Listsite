@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const listSelector = document.getElementById('list-selector');
     const newListBtn = document.getElementById('new-list-btn');
     const newListInput = document.getElementById('new-list-input');
+    const totalProgress = document.getElementById('prog');
+    const totalListProgress = document.getElementById('prog1');
 
     let lists = JSON.parse(localStorage.getItem('todo_lists')) || { 'default': [] };
     let currentList = 'default';
@@ -63,7 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalTasks = tasks.length;
         const completedTasks = tasks.filter(task => task.completed).length;
         const progress = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
+        let tot = 0;
+        let tot_c = 0;
+        let noOfLists = 0;
+        Object.keys(lists).forEach(listName => {
+            tot = tot + lists[listName].length;
+            tot_c = tot_c + lists[listName].filter(task => task.completed).length;
+            if (lists[listName].length == lists[listName].filter(task => task.completed).length) {
+                noOfLists++;
+            }
+        });
+        const progressTot = tot === 0 ? 0 : (tot_c / tot) * 100;
         progressBar.style.width = `${progress}%`;
+        totalProgress.innerHTML = `${tot_c} / ${tot}`;
+        totalListProgress.innerHTML = `${noOfLists}`;
     }
 
     function renderListSelector() {
