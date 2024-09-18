@@ -325,6 +325,25 @@ p2 {
         background-color: rgba(255, 59, 48, 0.1);
     }
 
+.delete-btn-list {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    font-size: 20px;
+    transition: var(--transition);
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+    .delete-btn-list:hover {
+        color: var(--delete-color);
+        background-color: rgba(255, 59, 48, 0.1);
+    }
+
 .progress-bar {
     width: 100%;
     height: 25px;

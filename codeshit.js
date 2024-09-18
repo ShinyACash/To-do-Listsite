@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newListInput = document.getElementById('new-list-input');
     const totalProgress = document.getElementById('prog');
     const totalListProgress = document.getElementById('prog1');
+    const delList = document.getElementById('delList');
 
     let lists = JSON.parse(localStorage.getItem('todo_lists')) || { 'default': [] };
     let currentList = 'default';
@@ -56,6 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function deleteTask(index) {
         lists[currentList].splice(index, 1);
+        saveLists();
+        renderTasks();
+    }
+
+    delList.addEventListener('click', () => deleteList());
+
+    function deleteList() {
+        delete lists[currentList];
+        window.alert("Your window will be refreshing now to display updated lists teehee.");
+        location.reload();
         saveLists();
         renderTasks();
     }
