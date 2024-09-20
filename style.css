@@ -478,6 +478,9 @@ p2 {
     .todo-container {
         padding: 16px;
     }
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
 
     h1 {
         font-size: 28px;
