@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const delList = document.getElementById('delList');
 
     let lists = JSON.parse(localStorage.getItem('todo_lists')) || { 'default': [] };
-    let currentList = 'default';
+    let currentList = Object.keys(lists)[0];
 
     function saveLists() {
         localStorage.setItem('todo_lists', JSON.stringify(lists));
@@ -64,11 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
     delList.addEventListener('click', () => deleteList());
 
     function deleteList() {
-        delete lists[currentList];
-        window.alert("Your window will be refreshing now to display updated lists teehee.");
-        location.reload();
-        saveLists();
-        renderTasks();
+        if (lists.length != 0) {
+            delete lists[currentList];
+            window.alert("Your window will be refreshing now to display updated lists teehee.");
+            location.reload();
+            saveLists();
+            renderTasks();
+        }
+        else {
+            window.alert("You only have one list left could you please add a new one and then delete this one? plsplsplspls");
+        }
     }
 
     function updateProgress() {
@@ -83,7 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tot = tot + lists[listName].length;
             tot_c = tot_c + lists[listName].filter(task => task.completed).length;
             if (lists[listName].length == lists[listName].filter(task => task.completed).length) {
-                noOfLists++;
+                if (lists[listName].length != 0) {
+                    noOfLists++;
+                }
             }
         });
         const progressTot = tot === 0 ? 0 : (tot_c / tot) * 100;
