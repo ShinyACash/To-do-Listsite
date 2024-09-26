@@ -1,7 +1,4 @@
 # To-do-List
 
 Adding usual features but with nice ui perhaps.
-
-## What to expect?
-
-Shit like animations and ability to have more than one list in the same place
+Get progress updates for total tasks over multiple lists and number of lists completed
