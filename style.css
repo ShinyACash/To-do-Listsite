@@ -1,0 +1,603 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+:root {
+    --background-color: #f5f5f7;
+    --card-background: #ffffff;
+    --text-color: #1d1d1f;
+    --secondary-text-color: #86868b;
+    --accent-color: #000000;
+    --completed-color: #86868b;
+    --delete-color: #ff3b30;
+    --progress-color: #34c759;
+    --border-radius: 12px;
+    --hoverborder-radius: 40px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.list{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.headertitle {
+    z-index: 10;
+    color: var(--text-color);
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5vw;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    border-bottom: solid 1px var(--accent-color);
+    width: 70.5vw;
+    padding-inline: 15vw;
+    padding-top: 2.15vh;
+    margin: -1vw;
+    padding-bottom: 1vh;
+}
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        margin-inline-end: -6vw;
+        gap: 40px;
+    }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.25rem;
+            font-family: "Caudex", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+.container1 {
+    position: relative;
+    top: 20vh;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(175,145,214,1) 100%);
+    border-radius: var(--hoverborder-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    outline: var(--accent-color) solid 2px;
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+}
+
+.container2 {
+    position: relative;
+    top: 20vh;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border-radius: var(--hoverborder-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    outline: var(--accent-color) solid 2px;
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+}
+
+.todo-container {
+    position: relative;
+    top: 20vh;
+    background-color: var(--card-background);
+    border-radius: var(--hoverborder-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: "Tilt Prism", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "XROT" 0, "YROT" 0;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.25rem;
+    padding: 10px;
+    color: black;
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.25rem;
+    padding: 10px;
+    color: black;
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+p2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.25rem;
+    padding: 10px;
+    color: black;
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.list-header {
+    font-size: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.list-selector {
+    font-size: 18px;
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 14px 25px;
+    border: none;
+    margin-bottom: 15px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.new-list-input {
+    display: none;
+    width: 65%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: var(--border-radius);
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.todo-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+    .todo-input input {
+        flex-grow: 1;
+        padding: 12px;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 16px;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    .todo-input button {
+        background-color: var(--accent-color);
+        color: var(--background-color);
+        border: none;
+        padding: 12px 20px;
+        border-radius: var(--border-radius);
+        margin-left: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+        .todo-input button:hover {
+            border-radius: var(--hoverborder-radius);
+            opacity: 0.9;
+        }
+
+    .btn {
+        background-color: var(--accent-color);
+        color: var(--background-color);
+        border: none;
+        padding: 12px 20px;
+        border-radius: var(--border-radius);
+        margin-left: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+        .btn:hover {
+            opacity: 0.9;
+            border-radius: var(--hoverborder-radius);
+        }
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+    transition: var(--transition);
+}
+
+    .todo-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .todo-item input[type="checkbox"] {
+        margin-right: 12px;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--accent-color);
+        border-radius: 50%;
+        outline: none;
+        transition: var(--transition);
+    }
+
+        .todo-item input[type="checkbox"]:checked {
+            background-color: var(--accent-color);
+            position: relative;
+        }
+
+            .todo-item input[type="checkbox"]:checked::before {
+                content: '✓';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 12px;
+            }
+
+    .todo-item label {
+        flex-grow: 1;
+        font-size: 16px;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .todo-item.completed label {
+        color: var(--completed-color);
+        text-decoration: line-through;
+    }
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--transition);
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+    .delete-btn:hover {
+        color: var(--delete-color);
+        background-color: rgba(255, 59, 48, 0.1);
+    }
+
+.delete-btn-list {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    font-size: 20px;
+    transition: var(--transition);
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+    .delete-btn-list:hover {
+        color: var(--delete-color);
+        background-color: rgba(255, 59, 48, 0.1);
+    }
+
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    background-color: rgba(0,0,0,0);
+    border-radius: var(--hoverborder-radius);
+    outline: var(--accent-color) solid 2px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: var(--hoverborder-radius);
+    transition: width 0.3s ease;
+}
+
+.prog {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    padding: 10px;
+    color: black;
+    margin-top: 80px;
+}
+
+.prog1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    padding: 10px;
+    color: black;
+    margin-top: 5vw;
+}
+
+.text1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    padding: 10px;
+    color: black;
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.toggle-switch {
+    position: relative;
+    top: -1vh;
+    width: 100px;
+    height: 50px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+}
+
+.light {
+    position: relative;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.light:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.light:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+::-webkit-scrollbar {
+    height: 0px;
+    width: 5px;
+    background: rgb(0,0,0);
+}
+
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(241, 238, 238);
+    border-radius: 10px;
+}
+
+
+@media (max-width: 480px) {
+    .todo-container {
+        padding: 16px;
+    }
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .container1 {
+        position: relative;
+        top: 20vh;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(175,145,214,1) 100%);
+        border-radius: var(--hoverborder-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        outline: var(--accent-color) solid 2px;
+        width: 100%;
+        height: 400px;
+        max-width: 80vw;
+    }
+
+    .container2 {
+        position: relative;
+        top: 20vh;
+        background-color: #8BC6EC;
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        border-radius: var(--hoverborder-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        width: 100%;
+        outline: var(--accent-color) solid 2px;
+        max-width: 80vw;
+    }
+
+    .todo-container {
+        position: relative;
+        top: 20vh;
+        background-color: var(--card-background);
+        border-radius: var(--hoverborder-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        width: 100%;
+        max-width: 80vw;
+    }
+
+    .todo-input input,
+    .todo-input button {
+        font-size: 14px;
+    }
+
+    .todo-item label {
+        font-size: 14px;
+    }
+
+    .headertitle {
+        z-index: 10;
+        color: var(--text-color);
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.5vh;
+    }
+
+    header {
+        position: fixed;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--background-color);
+        align-items: center;
+        border-bottom: solid 1px var(--accent-color);
+        width: 96.5vw;
+        padding-inline: 5vw;
+        padding-top: 2.15vh;
+        margin: -5.5vw;
+        padding-bottom: 1vh;
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        margin-inline-end: 5vw;
+        gap: 10px;
+    }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0px;
+            font-family: "Caudex", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+    .list {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.75rem;
+        padding: 10px;
+        color: black;
+        margin: 0;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .prog1 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 6rem;
+        padding: 10px;
+        color: black;
+        margin-top: 2vw;
+    }
+}

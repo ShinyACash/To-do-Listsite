@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="headshit">
+        <div class="headertitle">!GetMyList</div>
+        <nav>
+            <ul>
+                <div class="toggle-switch">
+                <label class="switch-label">
+                    <input type="checkbox" class="light" id="lightmode" onclick="lighting()">
+                    <span class="slider"></span>
+                </label>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="list">
+        <div class="container1">
+            <h2>Hello User!</h2>
+            <p1>Keep going! You're doing great, unless its at 0 then thats some serious skill issue.</p1>
+            <div id="prog" class="prog"></div>
+            <div class="text1">Total Tasks Completed! (All Lists Combined)</div>
+        </div>
+        <div class="todo-container">
+            <h1>To-Do</h1>
+            <button class="delete-btn-list" id="delList">x</button>
+            <div class="list-header">
+                <select id="list-selector" class="list-selector">
+                    <option></option>
+                </select>
+                <button id="new-list-btn" class="todo-input btn">New List</button>
+            </div>
+            <input type="text" id="new-list-input" class="new-list-input" placeholder="Enter new list name">
+            <div class="todo-input">
+                <input type="text" id="new-task" placeholder="Add a new task" aria-label="New task">
+                <button id="add-task">Add</button>
+            </div>
+            <ul id="todo-list" class="todo-list">
+            </ul>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+        <div class="container2">
+            <h3>Work, Work, Work!</h3>
+            <p1>Got a lotta lists to complete bruh!</p1>
+            <div id="prog1" class="prog1"></div>
+            <p2>Lists Completed</p2>
+        </div>
+    </div>
+    <script src="codeshit.js"></script>
+</body>
+</html>
