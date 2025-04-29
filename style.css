@@ -474,7 +474,7 @@ p2 {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
     .todo-container {
         padding: 16px;
     }
